@@ -33,11 +33,17 @@ public class FindDiagonalOrder_498 {
                 if (y < row)
                     ++x;
                 else {
-                    ++y;
+                    --y;
                     x += 2;
                 }
             }
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        FindDiagonalOrder_498 findDiagonal = new FindDiagonalOrder_498();
+        int test[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int res[] = findDiagonal.findDiagonalOrder(test);
     }
 }
