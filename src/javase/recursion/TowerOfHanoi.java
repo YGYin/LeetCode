@@ -5,6 +5,7 @@ public class TowerOfHanoi {
         if (num == 1)
             System.out.println(a + " -> " + c);
         else {
+            // More than 1 Tower
             // 1. Upper one moves from A to B by C
             move(num - 1, a, c, b);
             // 2. Bottom one moves from A to C directly
