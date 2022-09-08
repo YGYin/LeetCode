@@ -18,6 +18,10 @@ public class Register {
     }
 
     public static void userRegister(String name, String pwd, String email) {
+
+        if (!(name != null && pwd != null & email != null))
+            throw new RuntimeException("Parameters should not be null.");
+
         int nameLength = name.length();
         if (!(nameLength >= 2 && nameLength <= 4))
             throw new RuntimeException("Not valid name length");
