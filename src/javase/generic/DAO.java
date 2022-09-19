@@ -22,7 +22,7 @@ public class DAO<T> {
         list = dao.list();
         System.out.println("List: " + list);
 
-        System.out.println("id = 02: " + dao.get("03"));
+        System.out.println("id = 02: " + dao.get("02"));
     }
 
     public T get(String id) {
