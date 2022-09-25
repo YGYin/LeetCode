@@ -44,23 +44,26 @@ class Sales01 extends Thread {
 class Sales02 implements Runnable {
     // Because we only create one Sale02 instance, so it doesn't need to be static
     private int tkNum = 100;
+    private boolean loop = true;
+
+    public synchronized void sell() {
+        if (tkNum <= 0) {
+            System.out.println("Tickets were sold out.");
+            loop = false;
+            return;
+        }
+        System.out.println("Window " + Thread.currentThread().getName() + " sold one ticket."
+                + " Remain ticket: " + (--tkNum));
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Override
     public void run() {
-        while (true) {
-            if (tkNum <= 0) {
-                System.out.println("Tickets were sold out.");
-                break;
-            }
-
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
-            System.out.println("Window " + Thread.currentThread().getName() + " sold one ticket."
-                    + " Remain ticket: " + (--tkNum));
-        }
+        while (loop)
+            sell();
     }
 }
