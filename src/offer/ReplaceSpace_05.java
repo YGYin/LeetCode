@@ -14,4 +14,8 @@ public class ReplaceSpace_05 {
         }
         return stringBuilder.toString();
     }
+
+    public String replaceSpace_2(String s) {
+        return s.replace(" ", "%20");
+    }
 }
