@@ -26,4 +26,6 @@ public interface UserMapper {
 
     // 单条件动态查询
     List<User> selectBySingleCondition(User user);
+
+    void add(User user);
 }

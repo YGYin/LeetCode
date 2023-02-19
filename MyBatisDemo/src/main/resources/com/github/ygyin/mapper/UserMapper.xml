@@ -94,4 +94,10 @@
             </choose>
         </where>
     </select>
+
+
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_user(username, password, gender, addr)
+        VALUES (#{username}, #{password}, #{gender}, #{addr});
+    </insert>
 </mapper>

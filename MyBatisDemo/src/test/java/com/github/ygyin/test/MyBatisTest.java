@@ -99,4 +99,34 @@ public class MyBatisTest {
         System.out.println(users);
 
     }
+
+    @Test
+    public void testAdd() throws IOException {
+
+        String username = "Yu";
+        String password = "5555";
+        String gender = "female";
+        String addr = "Yunnan";
+
+        User bread = new User();
+        bread.setUsername(username);
+        bread.setPassword(password);
+        bread.setGender(gender);
+        bread.setAddr(addr);
+
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+        userMapper.add(bread);
+        Integer id = bread.getId();
+        System.out.println(id);
+
+        sqlSession.commit();
+        sqlSession.close();
+
+    }
 }
