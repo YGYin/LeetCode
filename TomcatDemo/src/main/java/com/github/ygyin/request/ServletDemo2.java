@@ -1,4 +1,4 @@
-package com.github.ygyin;
+package com.github.ygyin.request;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
