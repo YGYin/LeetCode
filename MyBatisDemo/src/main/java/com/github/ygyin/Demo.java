@@ -2,6 +2,7 @@ package com.github.ygyin;
 
 import com.github.ygyin.mapper.UserMapper;
 import com.github.ygyin.pojo.User;
+import com.github.ygyin.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -14,9 +15,10 @@ import java.util.List;
 public class Demo {
     public static void main(String[] args) throws IOException {
         // 1. 加载 MyBatis 的核心配置文件，获取 SqlSessionFactory
-        String resource = "mybatis-config.xml";
-        InputStream inputStream = Resources.getResourceAsStream(resource);
-        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+//        String resource = "mybatis-config.xml";
+//        InputStream inputStream = Resources.getResourceAsStream(resource);
+//        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+        SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
         // 2. 获取 SqlSession 对象，用于执行 sql
         SqlSession sqlSession = sqlSessionFactory.openSession();
