@@ -9,6 +9,7 @@
         <module name="MavenDemo" />
         <module name="TomcatDemo" />
         <module name="MyBatisDemo" />
+        <module name="SpringDemo" />
       </profile>
     </annotationProcessing>
   </component>
