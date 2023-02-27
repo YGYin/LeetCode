@@ -4,5 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="bookDao" class="dao.impl.BookDaoImpl"/>
-    <bean id="bookService" class="service.impl.BookServiceImpl"/>
+
+    <bean id="bookService" class="service.impl.BookServiceImpl">
+        <!--配置 service 与 dao 的依赖关系
+            将 bookService 实现类中的 bookDao 属性，
+            参照 id 为 bookDao 的实现类
+        -->
+        <property name="bookDao" ref="bookDao"/>
+
+    </bean>
 </beans>
