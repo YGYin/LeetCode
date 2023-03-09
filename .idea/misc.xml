@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVCDemo" />
     <file type="web" url="file://$PROJECT_DIR$/TomcatDemo" />
   </component>
   <component name="MavenProjectsManager">
@@ -11,10 +12,12 @@
         <option value="$PROJECT_DIR$/MyBatisDemo/pom.xml" />
         <option value="$PROJECT_DIR$/TomcatDemo/pom.xml" />
         <option value="$PROJECT_DIR$/SpringDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/AOPDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVCDemo/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
