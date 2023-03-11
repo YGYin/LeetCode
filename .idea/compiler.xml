@@ -8,11 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MavenDemo" />
         <module name="TomcatDemo" />
+        <module name="SpringDemo" />
+        <module name="RestfulDemo" />
         <module name="SpringMVCDemo" />
         <module name="MyBatisDemo" />
-        <module name="SpringDemo" />
         <module name="AOPDemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="RestFulDemo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/RestFulDemo" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCDemo" />
     <file type="web" url="file://$PROJECT_DIR$/TomcatDemo" />
   </component>
@@ -14,6 +15,7 @@
         <option value="$PROJECT_DIR$/SpringDemo/pom.xml" />
         <option value="$PROJECT_DIR$/AOPDemo/pom.xml" />
         <option value="$PROJECT_DIR$/SpringMVCDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/RestFulDemo/pom.xml" />
       </list>
     </option>
   </component>
