@@ -9,7 +9,6 @@
         <module name="MavenDemo" />
         <module name="TomcatDemo" />
         <module name="SpringDemo" />
-        <module name="RestfulDemo" />
         <module name="SpringMVCDemo" />
         <module name="MyBatisDemo" />
         <module name="AOPDemo" />
@@ -17,6 +16,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="RestFulDemo" target="1.8" />
+      <module name="RestfulDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
