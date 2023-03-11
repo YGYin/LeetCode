@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MavenDemo" />
         <module name="TomcatDemo" />
+        <module name="SsmDemo" />
         <module name="SpringDemo" />
         <module name="SpringMVCDemo" />
         <module name="MyBatisDemo" />
