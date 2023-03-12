@@ -1,4 +1,4 @@
-package com.github.ygyin;
+package com.github.ygyin.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;

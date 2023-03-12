@@ -1,4 +1,4 @@
-package com.github.ygyin;
+package com.github.ygyin.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
