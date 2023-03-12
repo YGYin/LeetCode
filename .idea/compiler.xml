@@ -9,6 +9,7 @@
         <module name="MavenDemo" />
         <module name="TomcatDemo" />
         <module name="SsmDemo" />
+        <module name="Maven_Pojo" />
         <module name="SpringDemo" />
         <module name="SpringMVCDemo" />
         <module name="MyBatisDemo" />
