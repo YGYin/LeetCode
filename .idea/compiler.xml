@@ -20,6 +20,7 @@
     <bytecodeTargetLevel>
       <module name="RestFulDemo" target="1.8" />
       <module name="RestfulDemo" target="1.5" />
+      <module name="SpringBootDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
