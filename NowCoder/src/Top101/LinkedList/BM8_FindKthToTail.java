@@ -18,4 +18,22 @@ public class BM8_FindKthToTail {
         }
         return slowP;
     }
+
+    public ListNode FindKthToTail_2(ListNode pHead, int k) {
+        int count = 0;
+        ListNode ptr = pHead;
+        //遍历链表，统计链表长度
+        while (ptr != null) {
+            ++count;
+            ptr = ptr.next;
+        }
+        //长度过小，返回空链表
+        if (count < k)
+            return null;
+        ptr = pHead;
+        //遍历n-k次
+        for (int i = 0; i < count - k; ++i)
+            ptr = ptr.next;
+        return ptr;
+    }
 }
