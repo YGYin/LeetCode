@@ -8,7 +8,7 @@ public class BM8_FindKthToTail {
         for (int i = 0; i < k; ++i) {
             // 链表长度小于 k 时
             if (fastP == null)
-                return slowP = null;
+                return null;
             fastP = fastP.next;
         }
         // 让快慢指针保持相对距离 k, 快指针先到底，慢指针指向倒数第 k 个
@@ -31,7 +31,7 @@ public class BM8_FindKthToTail {
         if (count < k)
             return null;
         ptr = pHead;
-        //遍历n-k次
+        //遍历 n - k 次
         for (int i = 0; i < count - k; ++i)
             ptr = ptr.next;
         return ptr;
