@@ -10,6 +10,14 @@ public class BM21_MinNumberInRotateArray {
         return array[0];
     }
 
+    /*
+        step 1: 双指针指向旋转后数组的首尾，作为区间端点。
+        step 2: 若是区间中点值大于区间右界值，则最小的数字一定在中点右边。
+        step 3: 若是区间中点值等于区间右界值，则是不容易分辨最小数字在哪半个区间，比如[1,1,1,0,1]，应该逐个缩减右界。
+        step 4: 若是区间中点值小于区间右界值，则最小的数字一定在中点左边。
+        step 5: 通过调整区间最后即可锁定最小值所在
+        O(logn) / O(1)
+     */
     public int minNumberInRotateArray_2(int[] array) {
         int n = array.length;
         if (n <= 1)
