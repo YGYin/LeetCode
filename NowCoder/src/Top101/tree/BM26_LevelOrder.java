@@ -2,6 +2,7 @@ package Top101.tree;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.Queue;
 
 public class BM26_LevelOrder {
@@ -21,9 +22,10 @@ public class BM26_LevelOrder {
 
      */
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
-        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
         if (root == null)
-            return res;
+            return null;
+
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
         // 新建队列，用于层次遍历，将根节点加入队列
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
