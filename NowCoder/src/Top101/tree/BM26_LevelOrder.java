@@ -22,10 +22,9 @@ public class BM26_LevelOrder {
 
      */
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
-        if (root == null)
-            return null;
-
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        if (root == null)
+            return res;
         // 新建队列，用于层次遍历，将根节点加入队列
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
