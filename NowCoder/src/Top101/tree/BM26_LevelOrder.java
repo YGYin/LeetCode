@@ -25,7 +25,7 @@ public class BM26_LevelOrder {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
         if (root == null)
             return res;
-        // 新建队列，用于层次遍历，将根节点加入队列
+        // 新建普通队列，用于层次遍历，并将根节点加入队列
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
         while (!queue.isEmpty()) {
@@ -33,13 +33,13 @@ public class BM26_LevelOrder {
             int qSize = queue.size();
             // 因为一开始进入队列的是根节点，所以每层节点数是多少，队列大小就是多少
             for (int i = 0; i < qSize; i++) {
-                TreeNode cur = queue.poll();
-                row.add(cur.val);
+                TreeNode curNode = queue.poll();
+                row.add(curNode.val);
                 // 若根节点存在左右子节点，存入左右直接点作为下一层
-                if (cur.left != null)
-                    queue.add(cur.left);
-                if (cur.right != null)
-                    queue.add(cur.right);
+                if (curNode.left != null)
+                    queue.add(curNode.left);
+                if (curNode.right != null)
+                    queue.add(curNode.right);
             }
             // 将该层的 row list 添加到 res 当中
             res.add(row);
