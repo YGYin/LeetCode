@@ -10,7 +10,7 @@ public class BM27_Print {
         思路与 BM26 二叉树层次遍历相同，加入 flag 判断用于反转单行数组
         单行反转，双行不反转
         时间复杂度: O(n)，其中 n 为二叉树的节点数，每个节点访问一次
-        空间复杂度: O(n)，队列的空间为二叉树的一层的节点数，最坏情况二叉树的一层为 O(n)
+  1      空间复杂度: O(n)，队列的空间为二叉树的一层的节点数，最坏情况二叉树的一层为 O(n)
      */
     public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
@@ -21,10 +21,10 @@ public class BM27_Print {
         queue.add(pRoot);
         boolean flag = true;
         while (!queue.isEmpty()) {
+            // 新建数组储存每列节点的数值
             ArrayList<Integer> row = new ArrayList<>();
             // 奇数行反转，偶数行不反转
             flag = !flag;
-            // 因先进入的是根节点，故每层节点多少，队列大小就是多少
             int qSize = queue.size();
             for (int i = 0; i < qSize; i++) {
                 TreeNode cur = queue.poll();
