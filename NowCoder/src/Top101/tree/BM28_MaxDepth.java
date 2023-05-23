@@ -33,5 +33,4 @@ public class BM28_MaxDepth {
         }
         return depth;
     }
-
 }
