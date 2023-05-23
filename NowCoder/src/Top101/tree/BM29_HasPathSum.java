@@ -52,7 +52,7 @@ public class BM29_HasPathSum {
         本级任务：每一级需要检查是否到了叶子节点，如果没有则递归地进入子节点，同时更新 sum 值减掉本层的节点值。
      */
     public boolean hasPathSum_2(TreeNode root, int sum) {
-        // 空节点找不到路径
+        // 空节点即没有路径
         if (root == null)
             return false;
         // 判断是子节点，且路径和刚好为 sum
