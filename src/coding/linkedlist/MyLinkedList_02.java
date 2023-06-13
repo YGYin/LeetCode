@@ -1,10 +1,10 @@
 package coding.linkedlist;
 
-public class MyLinkedList_03 {
+public class MyLinkedList_02 {
     ListNode head;
     int size;
 
-    public MyLinkedList_03() {
+    public MyLinkedList_02() {
         head = new ListNode(0);
         size = 0;
     }
