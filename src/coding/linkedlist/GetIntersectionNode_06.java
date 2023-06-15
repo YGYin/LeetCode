@@ -7,6 +7,9 @@ public class GetIntersectionNode_06 {
             1. 求两个链表长度，为方便处理让 curA 和 lenA 为最长链表头和长度
             2. 求长度差，curA 移动长度差个节点，使得 curA 和 curB 对齐
             3. 遍历 curA 和 curB，遇到相同的节点返回
+
+        时间复杂度: O(n + m)
+        空间复杂度: O(1)
      */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode curA = headA;
