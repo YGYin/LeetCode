@@ -1,6 +1,6 @@
 package coding.array;
 
-public class search_01 {
+public class Search_01 {
     /*
         左闭右闭区间，此时 left == right 有意义
      */

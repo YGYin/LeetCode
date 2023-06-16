@@ -1,6 +1,6 @@
 package coding.array;
 
-public class removeElement_02 {
+public class RemoveElement_02 {
     /*
         1. 暴力
             找到对应元素，后面元素全部往前移动一位；
