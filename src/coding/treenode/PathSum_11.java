@@ -21,6 +21,7 @@ public class PathSum_11 {
     private void traversal(TreeNode root, int targetSum, List<List<Integer>> res, List<Integer> path) {
         // 将当前节点加入 path
         path.add(root.val);
+        // 结束条件：到达叶子节点且 targetSum 为 0
         // 如果遇到叶子节点
         if (root.left == null && root.right == null) {
             // 而且和还为 target

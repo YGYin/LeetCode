@@ -29,6 +29,7 @@ public class FindBottomLeftValue_09 {
     /*
         2. 递归，前序遍历
         记录叶子节点当前最大深度的值，向左向右一边遍历一边回溯
+        记录深度为关键，只会记录当前最深深度的第一个节点
      */
     private int maxDepth = -1;
     private int res = 0;
