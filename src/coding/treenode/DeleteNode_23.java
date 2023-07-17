@@ -8,7 +8,7 @@ public class DeleteNode_23 {
         // 1. 没找到删除的节点
         if (root == null)
             return null;
-        //
+        // 找到删除的节点后
         if (root.val == key) {
             // 2. 左右都为空已包含在内
             // 3. 左孩子为空，右孩子不为空，将其右子树返回给父节点
