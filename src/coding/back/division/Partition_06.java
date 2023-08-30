@@ -12,7 +12,7 @@ public class Partition_06 {
         backtracking(s, 0);
         return res;
     }
-
+    // startIndex 实际为分割线的位置
     private void backtracking(String s, int startIndex) {
         // 如果大于字符串长度说明已经找到一个切割子串
         if (startIndex >= s.length()) {
