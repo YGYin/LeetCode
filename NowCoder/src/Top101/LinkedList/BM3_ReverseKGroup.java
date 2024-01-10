@@ -9,11 +9,11 @@ public class BM3_ReverseKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null || k == 1)
             return head;
-        // 找到每次翻转的尾部
+        // 找到每次翻转的尾部，即下一组的开头第一个元素
         ListNode tail = head;
         // 遍历 k 个节点到当前组的尾部
-        for (int i = 0; i < k; ++i) {
-            // 节点数小于 K 已经到达链表尾部，不翻转
+        for (int i = 0; i < k; i++) {
+            // 如果该组不足 k 个就到了链表尾，直接返回不用翻转
             if (tail == null)
                 return head;
             tail = tail.next;
@@ -21,14 +21,14 @@ public class BM3_ReverseKGroup {
         // 记录翻转所需的前序和当前节点
         ListNode pre = null;
         ListNode cur = head;
+
         while (cur != tail) {
-            // 翻转节点
             ListNode temp = cur.next;
             cur.next = pre;
             pre = cur;
             cur = temp;
         }
-        // 翻转后的当前尾部指向下一段要翻转的链表
+        // 翻转后 head 为当前组的最后一个节点，当前尾部指向下一段要翻转的链表
         head.next = reverseKGroup(tail, k);
         return pre;
     }

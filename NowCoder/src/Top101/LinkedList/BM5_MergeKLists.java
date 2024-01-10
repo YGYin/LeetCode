@@ -82,21 +82,24 @@ public class BM5_MergeKLists {
         // 构建小顶堆
         Queue<ListNode> pq = new PriorityQueue<>((v1, v2) -> v1.val - v2.val);
         // 遍历所有链表的第一个元素
-        for (int i = 0; i < lists.size(); ++i)
+        for (int i = 0; i < lists.size(); i++)
+            // 检测是否为空，不为空就加入小顶堆
             if (lists.get(i) != null)
                 pq.add(lists.get(i));
         // 新建链表
         ListNode res = new ListNode(-1);
         ListNode cur = res;
+        // 弹出小顶堆元素，直到为空
         while (!pq.isEmpty()) {
-            // 取出最小元素
-            ListNode minTemp = pq.poll();
-            // 连接到 res
-            cur.next = minTemp;
+            // 取出当前最小的元素
+            ListNode temp = pq.poll();
+            // 连接到答案中
+            cur.next = temp;
             cur = cur.next;
-            // 每次取出节点后，将该链表的后一个节点加入小顶堆
-            if (minTemp.next != null)
-                pq.add(minTemp.next);
+            // 每次再取出链表中的后一个元素，加入到小顶堆中
+            // 相当于维护了 k 个指针分别指向每个链表
+            if (temp.next != null)
+                pq.add(temp.next);
         }
         return res.next;
     }
