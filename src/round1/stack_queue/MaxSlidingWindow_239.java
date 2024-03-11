@@ -31,4 +31,26 @@ public class MaxSlidingWindow_239 {
         }
         return res;
     }
+
+    public int[] maxSlidingWindow_2(int[] nums, int k) {
+        ArrayDeque<Integer> deque = new ArrayDeque<>();
+        int len = nums.length;
+        int[] res = new int[len - k + 1];
+        int index = 0;
+        for (int j = 0; j < len; j++) {
+            // 检查当前元素下标是否还在当前窗口范围内
+            while (!deque.isEmpty() && deque.peek() < j - k + 1)
+                deque.poll();
+            // 保证为单调队列，进入队列时将小于该元素的元素都拿走
+            while (!deque.isEmpty() && nums[deque.peekLast()] < nums[j])
+                deque.pollLast();
+            // 将元素队列下标加入到队列中
+            deque.offer(j);
+
+            // 开始滑动窗口并且再符合的范围内，每次滑动将队列头节点加入到 res 中
+            if (j - k + 1 >= 0)
+                res[index++] = nums[deque.peek()];
+        }
+        return res;
+    }
 }

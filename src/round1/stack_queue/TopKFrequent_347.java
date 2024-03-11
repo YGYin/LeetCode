@@ -42,4 +42,33 @@ public class TopKFrequent_347 {
 
         return res;
     }
+
+    public int[] topKFrequent_2(int[] nums, int k) {
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++)
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+
+        PriorityQueue<int[]> pq = new PriorityQueue<>((p1, p2) -> p1[1] - p2[1]);
+        // 遍历 map
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            // 找前 k 个高频元素，先看小顶堆里面元素到达 k
+            if (pq.size() < k)
+                pq.add(new int[]{entry.getKey(), entry.getValue()});
+            else {
+                // 到达 k 后看该元素出现频次是否大于当前的小顶堆根节点
+                // 大于则将根节点推出，加入新节点
+                if (entry.getValue() > pq.peek()[1]) {
+                    pq.poll();
+                    pq.add(new int[]{entry.getKey(), entry.getValue()});
+                }
+            }
+        }
+        // 遍历 pq，倒序
+        int[] res = new int[k];
+        for (int i = k - 1; i >= 0; i--)
+            res[i] = pq.poll()[0];
+
+        return res;
+    }
 }
