@@ -28,9 +28,9 @@ public class IsValidBST_98 {
     private long prev = Long.MIN_VALUE;
 
     public boolean isValidBST_2(TreeNode root) {
-        if (root == null) {
+        if (root == null)
             return true;
-        }
+
         // 左
         if (!isValidBST(root.left))
             return false;
