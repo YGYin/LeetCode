@@ -18,7 +18,7 @@ public class FindBottomLeftValue_513 {
                 if (curNode.left != null)
                     queue.add(curNode.left);
                 if (curNode.right != null)
-                    queue.add(curNode.right)
+                    queue.add(curNode.right);
             }
         }
         return res;
