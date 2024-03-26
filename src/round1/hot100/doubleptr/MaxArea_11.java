@@ -2,7 +2,7 @@ package round1.hot100.doubleptr;
 
 public class MaxArea_11 {
     public int maxArea(int[] height) {
-        // 初始化双指针分别指向左右两块隔板
+        // 初始化双指针分别指向左右隔板
         int left = 0;
         int right = height.length - 1;
         int res = 0;
