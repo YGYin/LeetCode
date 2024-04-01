@@ -32,10 +32,10 @@ public class PermuteUnique_47 {
         for (int i = 0; i < nums.length; i++) {
             // 去重，同层前一个树枝和当前子节点相同
             if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])
-                return; // 继续在同层查找元素
+                continue; // 继续在同层查找元素
             // 全排列选择当前没有用过的节点
             if (used[i])
-                return;
+                continue;
             // 单层处理及诶点
             used[i] = true;
             path.add(nums[i]);
