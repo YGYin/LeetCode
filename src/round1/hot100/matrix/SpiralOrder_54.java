@@ -1,4 +1,4 @@
-package round1.hot100.array;
+package round1.hot100.matrix;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
