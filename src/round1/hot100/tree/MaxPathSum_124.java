@@ -22,7 +22,7 @@ public class MaxPathSum_124 {
         int curTreeSum = root.val + leftVal + rightVal;
         maxSum = Math.max(maxSum, curTreeSum);
 
-        // 同时，要返回当前子树能够对外(其他树)提供的最大和（进入递归）
+        // 同时，要返回当前子树路径能够对外(其他树)提供的最大和（进入递归）
         // 相当于只选取左子树路径或者右子树路径，用于传递给父节点
         // 有三种选择，要么停留在当前节点，要么向左，要么向右
         int outputSum = root.val + Math.max(0, Math.max(leftVal, rightVal));
