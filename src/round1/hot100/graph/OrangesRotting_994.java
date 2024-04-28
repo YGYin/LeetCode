@@ -59,20 +59,6 @@ public class OrangesRotting_994 {
         return fresh > 0 ? -1 : minute;
     }
 
-
-    public int orangesRotting_2(int[][] grid) {
-        // 腐烂的橘子，染色 bfs 模板
-        int minute = 0;
-        visited = new boolean[grid.length][grid[0].length];
-        int fresh = 0;
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[0].length; j++) {
-                if (grid[i][j] == 2)
-                    bfs(grid, i, j, minute);
-            }
-        }
-    }
-
     private void bfs(int[][] grid, int row, int col, int minute) {
         // 辅助队列
         Deque<int[]> queue = new ArrayDeque<>();
