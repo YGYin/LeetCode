@@ -1,4 +1,4 @@
-package round1.dp;
+package round1.hot100.dp;
 
 import java.util.Arrays;
 
