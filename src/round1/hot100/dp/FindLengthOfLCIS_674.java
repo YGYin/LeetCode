@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class FindLengthOfLCIS_674 {
     public int findLengthOfLCIS(int[] nums) {
         /*
-            乘积最大子数组：数组中乘积最大的非空连续子数组
+            最大连续递增的子数组：数组中乘积最大的非空连续子数组
             1. dp[i]: 下标为 i 结尾时的最长连续递增序列的长度
             2. 递推公式:
                 连续体现在只需要 i 和 i - 1 作比较，
