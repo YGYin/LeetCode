@@ -4,6 +4,7 @@ public class Search_33 {
     /*
         搜索旋转排序数组
         1 2 3 4 5 6 7 可以大致分为两类
+        比较 nums[left] 和 nums[mid] 是为了确定哪半段为有序
         第一类 2 3 4 5 6 7 1，也就是 nums[left] <= nums[mid]
             前半段有序，如果 nums[left] <= target < nums[mid] 就在前半部份找
         第二类 6 7 1 2 3 4 5，也就是 nums[left] > nums[mid]
