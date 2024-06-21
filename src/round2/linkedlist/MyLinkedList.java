@@ -5,11 +5,11 @@ public class MyLinkedList {
     // 储存链表中节点个数
     int size;
     // 需要虚拟头节点
-    ListNode dummyHead;
+    MyListNode dummyHead;
 
     public MyLinkedList() {
         // 初始化头节点，节点数为 0
-        dummyHead = new ListNode(-1);
+        dummyHead = new MyListNode(-1);
         this.size = 0;
     }
 
@@ -21,7 +21,7 @@ public class MyLinkedList {
         if (index < 0 || index >= size)
             return -1;
         // 遍历链表，下标从 0 开始，需要到达 index，<= index
-        ListNode cur = dummyHead;
+        MyListNode cur = dummyHead;
         for (int i = 0; i <= index; i++)
             cur = cur.next;
 
@@ -43,13 +43,13 @@ public class MyLinkedList {
         if (index < 0)
             index = 0;
 
-        ListNode pre = dummyHead;
+        MyListNode pre = dummyHead;
         // 到达插入前一个节点的位置
         for (int i = 0; i < index; i++)
             pre = pre.next;
 
         // 插入节点，先记录下一节点
-        ListNode newNode = new ListNode(val);
+        MyListNode newNode = new MyListNode(val);
         newNode.next = pre.next;
         pre.next = newNode;
         ++size;
@@ -60,7 +60,7 @@ public class MyLinkedList {
         // index 为 0 的时候为真实头节点
         if (index < 0 || index >= size)
             return;
-        ListNode pre = dummyHead;
+        MyListNode pre = dummyHead;
         // 到达删除节点的前一个节点
         for (int i = 0; i < index; i++)
             pre = pre.next;
@@ -70,18 +70,18 @@ public class MyLinkedList {
     }
 }
 
-class ListNode {
+class MyListNode {
     int val;
-    ListNode next;
+    MyListNode next;
 
-    public ListNode() {
+    public MyListNode() {
     }
 
-    public ListNode(int val) {
+    public MyListNode(int val) {
         this.val = val;
     }
 
-    public ListNode(int val, ListNode next) {
+    public MyListNode(int val, MyListNode next) {
         this.val = val;
         this.next = next;
     }
