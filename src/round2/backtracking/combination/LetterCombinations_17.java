@@ -1,4 +1,4 @@
-package round2.backtracking;
+package round2.backtracking.combination;
 
 import java.util.ArrayList;
 import java.util.List;
