@@ -1,4 +1,4 @@
-package round2.dp;
+package round2.dp.profit;
 
 public class MaxProfit_188 {
     /*
