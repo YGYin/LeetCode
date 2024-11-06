@@ -20,6 +20,7 @@ public class ReverseKGroup_25 {
         // 判空
         if (head == null || head.next == null)
             return head;
+        // 需要定义虚拟头节点
         ListNode dummyHead = new ListNode(-1);
         dummyHead.next = head;
         // 初始化 pre 以及 end 节点
@@ -27,23 +28,20 @@ public class ReverseKGroup_25 {
         ListNode end = dummyHead;
 
         // 当 end.next 不等于空，说明还有链表需要进行判断是否要翻转
-        while (end.next != null) {
-            // 初始化 start
+        while (end != null) {
             ListNode start = prev.next;
-            // 遍历 k 次
+
             for (int i = 0; i < k && end != null; i++)
                 end = end.next;
-            // 如果 end 为空，说明剩余节点不足 k 个，直接 break 返回
             if (end == null)
                 break;
 
-            // 记录 next 节点，并断开链表进行翻转
+            // 记录 next 节点，准备断开链表进行翻转
             ListNode next = end.next;
             end.next = null;
-            // 翻转链表，用 pre 接住
+            // 翻转链表，使用 pre 接住翻转后链表
             prev.next = reverseList(start);
-
-            // 翻转完成后，start 已经指向翻转后链表的末尾，连接上 next
+            // start 位于翻转链表后的尾部，需要连接上原来的链表
             start.next = next;
             // 更新 prev 和 end 指针
             prev = start;
@@ -54,11 +52,12 @@ public class ReverseKGroup_25 {
     }
 
     private ListNode reverseList(ListNode head) {
-        if (head == null)
+        if (head == null || head.next == null)
             return head;
 
         ListNode pre = null;
         ListNode cur = head;
+
         while (cur != null) {
             ListNode temp = cur.next;
             cur.next = pre;
