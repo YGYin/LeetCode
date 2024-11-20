@@ -1,6 +1,6 @@
 package round3.hot100.array;
 
-public class maxSubArray_53 {
+public class MaxSubArray_53 {
     /*
         最大子数组和
      */
